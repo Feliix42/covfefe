@@ -20,7 +20,16 @@ impl Covfefe for String {
 
 #[cfg(test)]
 mod tests {
+    use Covfefe;
+
     #[test]
-    fn it_works() {
+    fn make_covfefe() {
+        let test1 = String::from("Despite the constant negative press");
+        assert_eq!(test1.covfefe(),
+                   "Despite the constant negative press covfefe");
+
+        let test2 = String::from("Despite the constant negative press ");
+        assert_eq!(test2.covfefe(),
+                   "Despite the constant negative press covfefe");
     }
 }
