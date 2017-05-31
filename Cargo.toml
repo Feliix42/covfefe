@@ -2,5 +2,13 @@
 name = "covfefe"
 version = "0.1.0"
 authors = ["Felix Wittwer <dev@felixwittwer.de>"]
+description = "End sentences with style."
+
+repository = "https://github.com/feliix42/covfefe-rs"
+documentation = "https://docs.rs/crate/covfefe"
+
+license = "MIT"
+keywords = ["covfefe", "trump"]
+readme = "README.md"
 
 [dependencies]
