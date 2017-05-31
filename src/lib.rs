@@ -1,4 +1,15 @@
-//! This is a small crate to end tweets or sentences in Style.
+//! This is a small crate to end tweets or sentences with Style.
+//!
+//! This crate is inspired by [rgbkrk](https://github.com/rgbkrk/covfefe) and
+//! the [45th president](https://archive.is/f7UL3) of the United States of America.
+//! It basically consists of a _Trait_ - `Cofveve`, which is implemented for all
+//! types that implement [`ToString`](https://doc.rust-lang.org/std/string/trait.ToString.html).
+//!
+//! ## Example
+//! ```
+//! # use Covfefe;
+//! println!("{}", "Despite the constant negative press".covfefe());
+//! ```
 
 #![deny(missing_docs, unsafe_code,
         missing_copy_implementations,
@@ -7,9 +18,11 @@
 #![warn(missing_debug_implementations)]
 use std::string::String;
 
-/// The Covfefe Trait. A perk not everyone has.
+/// The Covfefe Trait. Not everyone has it.
 pub trait Covfefe {
     /// Covfefe.
+    ///
+    /// Terminate the input using pure knowledge and skill.
     fn covfefe(self) -> String;
 }
 
