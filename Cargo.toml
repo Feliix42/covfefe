@@ -1,14 +1,14 @@
 [package]
-name = "covfefe"
+name = "covfefify"
 version = "0.1.0"
 authors = ["Felix Wittwer <dev@felixwittwer.de>"]
 description = "End sentences with style."
 
 repository = "https://github.com/feliix42/covfefe"
-documentation = "https://docs.rs/crate/covfefe"
+documentation = "https://docs.rs/crate/covfefify"
 
 license = "MIT"
-keywords = ["covfefe", "trump"]
+keywords = ["covfefe", "trump", "covfefify"]
 readme = "README.md"
 
 [dependencies]

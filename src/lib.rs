@@ -7,8 +7,8 @@
 //!
 //! ## Example
 //! ```
-//! # use covfefe::Covfefe;
-//! println!("{}", "Despite the constant negative press".covfefe());
+//! # use covfefify::Covfefe;
+//! println!("{}", "Despite the constant negative press".covfefify());
 //! ```
 
 #![deny(missing_docs, unsafe_code,
@@ -23,7 +23,7 @@ pub trait Covfefe {
     /// Covfefe.
     ///
     /// Terminate the input using pure knowledge and skill.
-    fn covfefe(self) -> String;
+    fn covfefify(self) -> String;
 }
 
 
@@ -31,7 +31,7 @@ impl<T> Covfefe for T
     where T: ToString
 {
     #[inline(always)]
-    fn covfefe(self) -> String {
+    fn covfefify(self) -> String {
         let mut modified_string = self.to_string();
         if modified_string.ends_with(" ") {
             modified_string.push_str("covfefe");
@@ -50,20 +50,20 @@ mod tests {
     #[test]
     fn make_covfefe() {
         let test1 = String::from("Despite the constant negative press");
-        assert_eq!(test1.covfefe(),
+        assert_eq!(test1.covfefify(),
                    "Despite the constant negative press covfefe");
 
         let test2 = String::from("Despite the constant negative press ");
-        assert_eq!(test2.covfefe(),
+        assert_eq!(test2.covfefify(),
                    "Despite the constant negative press covfefe");
     }
 
     #[test]
     fn make_covfefe_str() {
-        assert_eq!("Despite the constant negative press".covfefe(),
+        assert_eq!("Despite the constant negative press".covfefify(),
                    "Despite the constant negative press covfefe");
 
-        assert_eq!("Despite the constant negative press ".covfefe(),
+        assert_eq!("Despite the constant negative press ".covfefify(),
                    "Despite the constant negative press covfefe");
     }
 }
