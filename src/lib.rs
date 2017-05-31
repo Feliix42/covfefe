@@ -1,6 +1,15 @@
+//! This is a small crate to end tweets or sentences in Style.
+
+#![deny(missing_docs, unsafe_code,
+        missing_copy_implementations,
+        trivial_casts, trivial_numeric_casts,
+        unused_import_braces, unused_qualifications)]
+#![warn(missing_debug_implementations)]
 use std::string::String;
 
+/// The Covfefe Trait. A perk not everyone has.
 pub trait Covfefe {
+    /// Covfefe.
     fn covfefe(self) -> String;
 }
 
