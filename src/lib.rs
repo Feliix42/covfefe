@@ -6,6 +6,7 @@ pub trait Covfefe {
 
 
 impl Covfefe for String {
+    #[inline(always)]
     fn covfefe(self) -> String {
         let mut modified_string = String::from(self);
         if modified_string.ends_with(" ") {
