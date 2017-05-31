@@ -7,7 +7,7 @@
 //!
 //! ## Example
 //! ```
-//! # use Covfefe;
+//! # use covfefe::Covfefe;
 //! println!("{}", "Despite the constant negative press".covfefe());
 //! ```
 

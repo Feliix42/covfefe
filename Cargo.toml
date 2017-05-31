@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Felix Wittwer <dev@felixwittwer.de>"]
 description = "End sentences with style."
 
-repository = "https://github.com/feliix42/covfefe-rs"
+repository = "https://github.com/feliix42/covfefe"
 documentation = "https://docs.rs/crate/covfefe"
 
 license = "MIT"
