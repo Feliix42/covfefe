@@ -5,10 +5,12 @@ pub trait Covfefe {
 }
 
 
-impl Covfefe for String {
+impl<T> Covfefe for T
+    where T: ToString
+{
     #[inline(always)]
     fn covfefe(self) -> String {
-        let mut modified_string = String::from(self);
+        let mut modified_string = self.to_string();
         if modified_string.ends_with(" ") {
             modified_string.push_str("covfefe");
         } else {
@@ -31,6 +33,15 @@ mod tests {
 
         let test2 = String::from("Despite the constant negative press ");
         assert_eq!(test2.covfefe(),
+                   "Despite the constant negative press covfefe");
+    }
+
+    #[test]
+    fn make_covfefe_str() {
+        assert_eq!("Despite the constant negative press".covfefe(),
+                   "Despite the constant negative press covfefe");
+
+        assert_eq!("Despite the constant negative press ".covfefe(),
                    "Despite the constant negative press covfefe");
     }
 }
